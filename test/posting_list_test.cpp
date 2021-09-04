@@ -1240,6 +1240,9 @@ TEST(PostingListTest, CompactToFullPostingListConversion) {
 
     ASSERT_EQ(4, c1->num_ids());
     ASSERT_EQ(4, p1->num_ids());
+
+    free(c1);
+    delete p1;
 }
 
 TEST(PostingListTest, BlockIntersectionOnMixedLists) {

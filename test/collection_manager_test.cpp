@@ -529,6 +529,7 @@ TEST_F(CollectionManagerTest, Symlinking) {
 
 TEST_F(CollectionManagerTest, LoadMultipleCollections) {
     // to prevent fixture tear down from running as we are fudging with CollectionManager singleton
+    collectionManager.dispose();
     delete store;
     store = nullptr;
 
